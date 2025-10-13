@@ -1,0 +1,8 @@
+{
+  "name": "SwiftCart: Vision-Aware Checkout",
+  "description": "A vision-driven, emotion-aware checkout system that uses a camera to detect items, adapts the UI to your mood, and supports voice commands for a futuristic shopping experience.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
