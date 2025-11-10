@@ -1,20 +1,47 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🛒 SwiftCart — Vision-Aware, Emotion-Sensitive Checkout System
 
-# Run and deploy your AI Studio app
+SwiftCart is a futuristic checkout experience that combines computer vision, emotional intelligence, and voice interaction to make shopping feel human again. Built with React + TypeScript, it’s modular, expressive, and demo-ready.
 
-This contains everything you need to run your app locally.
+## 🧠 Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1XdgUgyYJ_8DjdmGIZ1scYyBc78KNX8nw
+### ✅ Working
+- 📸 **Image Upload + Detection** — Upload grocery images and auto-identify items using YOLOv8 or mocked logic.
+- 🛒 **Live Cart Updates** — Detected items populate the cart with name, quantity, and price.
+- 🧹 **Cart Controls** — Replace image, clear cart, confirm detection.
+- 💾 **Local Storage Persistence** — Cart survives refreshes and browser naps.
+- 🎨 **Tailwind-Powered UI** — Styled with flair, fast to load, and easy on the eyes.
 
-## Run Locally
+### ⚠️ Mocked / Partially Functional
+- 🗣️ **Voice Assistant** — Button simulates “What’s in my cart?” via Web Speech API (speech playback pending).
+- 📡 **Offline Mode** — Simulated banner and local cart logic (no real network detection yet).
+- 🧠 **Gemini Product Suggestions** — Gemini API wired in, suggestions mocked.
 
-**Prerequisites:**  Node.js
+## 🧩 Tech Stack
 
+### Core Frontend
+- **React** — Component-based UI with hooks (`useState`, `useEffect`, `useRef`)
+- **TypeScript** — Static typing for robust development
+- **HTML5 & CSS3** — Standard structure and styling
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Styling
+- **Tailwind CSS** — Utility-first, CDN-loaded, rapid UI development
+
+### AI & ML
+- **Google Gemini API (`@google/genai`)** — Product suggestions, image identification
+- **MediaPipe FaceLandmarker** — On-device emotion detection via webcam
+
+### Browser APIs
+- **WebRTC / MediaDevices (`getUserMedia`)** — Webcam access
+- **Web Speech API** — `SpeechRecognition` + `SpeechSynthesis`
+- **Local Storage API** — Persistent cart via `useLocalStorage` hook
+- **ES Modules + Import Maps** — CDN-loaded modules, no bundler required
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/yourusername/swiftcart.git
+cd swiftcart
+npm install
+npm run dev
